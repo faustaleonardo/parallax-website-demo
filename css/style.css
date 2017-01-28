@@ -1,0 +1,81 @@
+body{
+	font-family: "Open Sans", sans-serif;
+}
+
+h1{
+	color: #CCC;
+	font-weight: 300;
+}
+
+figure{
+	margin: auto;
+}
+
+.content article{
+	padding: 100px 0;
+	max-width: 640px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+img{
+	max-width: 100%;
+}
+
+/* Parallax */
+.bird-box{
+	position: relative;
+	height: 600px;
+	background-image: url('../images/bird-bg.jpg');
+	/*background-size: width height*/
+	background-size: auto 600px; 
+	background-position: top center;
+	/*background-attachment is used to make fix the background while scrolling*/
+	background-attachment: fixed;
+	overflow: hidden;
+}
+
+.logo{
+	height: 100px;
+	width: 100%;
+	/*background-color: pink;*/
+	background-image: url('../images/black-bird-logo.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 50%;
+	/*because of 50% can not really mid this logo in center, margin-top is used to center it*/
+	/*this logo has a height of 100px, so margin-top has to be -50px*/
+	margin-top: -50px;
+}
+
+.fore-bird{
+	width: 960px;
+	/*this height follows the same height of original image*/
+	height: 733px;
+	/*background-color: pink;*/
+	/*opacity: 0.3;*/
+	background-image: url('../images/fore-bird.png');
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	position: absolute;
+	left: 50%;
+	/*because of 50% can not really mid this logo in center, margin-left is used to center it*/
+	/*this fore-bird has a width of 960px, so margin-top has to be -480px*/
+	margin-left: -480px;
+	top: 380px;
+}
+
+.back-bird{
+	width: 960px;
+	/*this height follows the same height of original image*/
+	height: 298px;
+/*	background-color: pink;
+	opacity: 0.4;
+*/	background-image: url('../images/back-bird.png');
+	background-repeat: no-repeat;
+	background-position: top left;
+	position: absolute;
+	left: 50%;
+	margin-left: -480px;
+}
