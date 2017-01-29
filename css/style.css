@@ -83,17 +83,43 @@ img{
 }
 
 /*Model Grid*/
+.clothes-pics{
+	margin-bottom: 100px;
+}
+
 .clothes-pics figure{
 	margin-bottom: 20px;
 	position: relative;
 	opacity: 0;
 	transform: translateX(-20px);
 	transition: all 0.3s ease-in-out;
+	overflow: hidden;
+	cursor: pointer;
 }
 
 .clothes-pics figure.is-showing{
 	opacity: 1;
 	transform: translateX(0px);
+}
+
+.clothes-pics figure img{
+	/*need to be display block to let figcaption fit in the figure*/
+	display: block;
+	/*transform: scale is used to zoom in/out an image*/
+	transform: scale(1);
+	transition: all 0.3s ease-in-out;
+}
+
+
+.clothes-pics figure figcaption{
+	position: absolute;
+	bottom: 10px;
+	left: -100%;
+	background-color: black;
+	color: white;
+	padding: 2px 8px; 
+	font-size: 11px;
+	transition: all 0.3s ease-in-out;
 }
 
 /*Large Window*/

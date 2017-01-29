@@ -1,5 +1,15 @@
 $(document).ready(function(){
-	
+
+
+	// to animate figcaption. This can be done if using sass(nested)
+	$('.clothes-pics figure').hover(function(){
+		    $(this).find('figcaption').css('left', '0%');
+		    $(this).find('img').css('transform', 'scale(1.1)');
+	    }, function(){
+	    	$(this).find('figcaption').css('left', '-100%');
+		    $(this).find('img').css('transform', 'scale(1)');
+	});
+
 	$(window).scroll(function(){
 		var wScroll = $(this).scrollTop();
 
