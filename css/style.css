@@ -18,9 +18,9 @@ img{
 
 .content{
 	position: relative;
-	z-index: 2;
 	background-color: white;
 	margin-bottom: 400px;
+	overflow: hidden;
 }
 
 .content article{
@@ -226,6 +226,7 @@ footer{
 	position: fixed;
 	bottom: 0;
 	width: 100%;
+	z-index: -1;
 }
 
 footer .footer-stuff{
