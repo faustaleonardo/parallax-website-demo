@@ -29,7 +29,6 @@ $(document).ready(function(){
 
 		// to decide when to display the animation
 		if (wScroll > ($('.clothes-pics').offset().top - $(window).height() / 1.2)){
-
 			// i starts with 0
 			$('.clothes-pics figure').each(function(i){
 				setTimeout(function(){
@@ -37,7 +36,19 @@ $(document).ready(function(){
 					$('.clothes-pics figure').eq(i).addClass('is-showing');
 				}, 150 * (i+1));
 			});
+		}
 
+		// when the element is beginning to appear from bottom
+		if (wScroll > $('.large-window').offset().top - $(window).height()){
+			// this is only for better body of image coming first
+			$('.large-window').css({'background-position' : 'center ' + (wScroll - $('.large-window').offset().top) + 'px'});
+
+			// opacity becoming higher when user scrolls more down
+			// to get value between 0-1
+			// 400 and /5 are used to make the element range between 0.9-0.1 (two digits)
+			var opacity = (wScroll - $('.large-window').offset().top + 400) / (wScroll / 5);
+
+			$('.window-tint').css({'opacity' : opacity});
 		}
 
 	});
