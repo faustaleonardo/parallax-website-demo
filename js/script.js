@@ -14,7 +14,6 @@ $(document).ready(function(){
 		var wScroll = $(this).scrollTop();
 
 		// translate(speedToGoHorizontal, speedToGoVertical)
-
 		// + to make them going down
 		$('.logo').css({
 			'transform': 'translate(0px, ' + wScroll/2 + '%)'
@@ -51,8 +50,13 @@ $(document).ready(function(){
 			$('.window-tint').css({'opacity' : opacity});
 		}
 
+		if (wScroll > $('.blog-posts').offset().top - $(window).height()){
+			// Math.min is used to make sure the position is not over 0
+			var offset = Math.min(0, wScroll - $('.blog-posts').offset().top + $(window).height() - 350);
+			$('.post-1').css({'transform': 'translate(' + offset + 'px,' + Math.abs(offset * 0.2) + 'px)'});
+			$('.post-3').css({'transform': 'translate(' + Math.abs(offset) + 'px,' + Math.abs(offset * 0.2) + 'px)'});
+		}
+
 	});
-
-
 
 });
