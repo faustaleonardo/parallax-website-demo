@@ -16,13 +16,19 @@ img{
 }
 /*end*/
 
+.content{
+	position: relative;
+	z-index: 2;
+	background-color: white;
+	margin-bottom: 400px;
+}
+
 .content article{
 	padding: 100px 0;
 	max-width: 640px;
 	margin: 0 auto;
 	text-align: center;
 }
-
 
 /* Parallax */
 .bird-box{
@@ -35,6 +41,7 @@ img{
 	/*background-attachment is used to make fix the background while scrolling*/
 	background-attachment: fixed;
 	overflow: hidden;
+	z-index: 3;
 }
 
 .logo{
@@ -208,4 +215,24 @@ img{
 
 .blog-posts .post-3{
 	transform: translate(-100px, 20px);
+}
+
+/*footer*/
+footer{
+	background-color: black;
+	color: white;
+	padding: 40px 0;
+	font-size: 0.9em;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
+footer .footer-stuff{
+	max-width: 640px;
+	margin: 0 auto;
+}
+
+footer a{
+	color: white;
 }
