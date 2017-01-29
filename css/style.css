@@ -7,9 +7,14 @@ h1{
 	font-weight: 300;
 }
 
+/*start. To make images become full-width to their parent element*/
 figure{
 	margin: auto;
 }
+img{
+	max-width: 100%;
+}
+/*end*/
 
 .content article{
 	padding: 100px 0;
@@ -18,9 +23,6 @@ figure{
 	text-align: center;
 }
 
-img{
-	max-width: 100%;
-}
 
 /* Parallax */
 .bird-box{
@@ -78,4 +80,18 @@ img{
 	position: absolute;
 	left: 50%;
 	margin-left: -480px;
+}
+
+/*Model Grid*/
+.clothes-pics figure{
+	margin-bottom: 20px;
+	position: relative;
+	opacity: 0;
+	transform: translateX(-20px);
+	transition: all 0.3s ease-in-out;
+}
+
+.clothes-pics figure.is-showing{
+	opacity: 1;
+	transform: translateX(0px);
 }
